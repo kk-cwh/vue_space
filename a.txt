@@ -1,4 +1,0 @@
-hello git
-hello wrold
-welcome to git
-git 命令学习demo
