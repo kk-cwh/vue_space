@@ -2,13 +2,13 @@
   <div>
 
     <ul class="store">
-      <li v-for="(item,index) in ulDatas" :key="item+index" > 
+      <li v-for="(item,index) in ulDatas" :key="item+index" >
       <span v-text="item"></span>
       <i class="fa fa-times " @click="del(index)"></i>
       </li>
-      <li><input class="search" v-model="search" /></li>
+      <li><input class="search" v-model="searchStr" /></li>
     </ul>
-    
+
     <ul class="searchData">
       <li v-for="item in searchData" :key="item" v-text="item" @click="addToUl(item)"> </li>
     </ul>
@@ -17,20 +17,19 @@
 
 <script>
 export default {
-  name: 'Select',
+  name: 'selectMe',
+  props: ['search', 'items'],
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      search: '',
-      items: ['中国', '美国', '韩国', '日本'],
+      searchStr: this.search,
       ulDatas: []
     }
   },
   computed: {
     searchData: function () {
-      if (this.search) {
+      if (this.searchStr) {
         return this.items.filter(item => {
-          return item.indexOf(this.search) > -1
+          return item.indexOf(this.searchStr) > -1
         })
       }
       return []
@@ -53,13 +52,20 @@ export default {
   border: 1px solid #000000;
   box-sizing: border-box;
   /* outline:none; */
+
 }
 .searchData {
   list-style: none;
+  margin: 4px;
+  padding: 0;
   background: #fff;
 }
 .searchData li {
   background: #fff;
+  /* border:1px solid #b3b3b3; */
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 5px;
 }
 .searchData li:hover {
   background: #efefef;
@@ -69,6 +75,8 @@ export default {
   padding: 5px;
   border: 1px solid #bbb9b9eb;
   box-sizing: border-box;
+  margin: 4px;
+border-radius: 5px;
 }
 .store li {
   display: inline-block;
