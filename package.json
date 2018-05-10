@@ -11,7 +11,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+<<<<<<< HEAD
     "vant": "^1.0.1",
+=======
+    "mint-ui": "^2.2.13",
+>>>>>>> 07aa3aaf0a96bfba3a5854be4301c3f73d4e6ee1
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

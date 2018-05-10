@@ -6,7 +6,13 @@ import router from './router'
 import Vant from 'vant'
 import 'vant/lib/vant-css/index.css'
 
+<<<<<<< HEAD
 Vue.use(Vant)
+=======
+import Mint from 'mint-ui'
+Vue.use(Mint)
+
+>>>>>>> 07aa3aaf0a96bfba3a5854be4301c3f73d4e6ee1
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
