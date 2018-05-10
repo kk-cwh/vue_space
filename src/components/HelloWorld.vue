@@ -1,18 +1,25 @@
 <template>
-  <div class="hello">
-   <SelectMe :search='1' :items='datas'></SelectMe>
+  <div class=" mdui-valign">
+    <img class="mdui-img-circle mdui-hoverable" :src="imageURL" />
+    <button class="mdui-btn mdui-ripple mdui-ripple-black mdui-color-yellow">black</button>
+    <button class="mdui-btn mdui-ripple mdui-ripple-white mdui-color-blue">white</button>
+    <button class="mdui-btn mdui-ripple mdui-ripple-red">red</button>
+    <button class="mdui-btn mdui-ripple mdui-ripple-blue">blue</button>
   </div>
 </template>
 
 <script>
-import SelectMe from './selectMe.vue'
+
 export default {
   name: 'HelloWorld',
-  components: {SelectMe},
-  data () {
+
+  data() {
     return {
-      msg: '1',
-      datas: ['中国', '美国', '韩国']
+      imageURL: 'https://img1.mukewang.com/54584f6d0001759002200220-140-140.jpg',
+      images: [
+        'https://img1.mukewang.com/54584f6d0001759002200220-140-140.jpg',
+        'https://img.yzcdn.cn/public_files/2017/09/05/3bd347e44233a868c99cf0fe560232be.jpg'
+      ]
     }
   }
 }
@@ -20,12 +27,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello{
-  /* width: 100px;
-  height: 100px; */
-  /* background: url('/static/uicon.jpg') ; */
-  background-size: 100% 100%;
-  border-radius: 50%;
-  /* box-shadow: 0 0  5px 5px rgb(27, 185, 27) ; */
-}
+
 </style>
